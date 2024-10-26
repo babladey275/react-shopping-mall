@@ -1,18 +1,18 @@
 import PropTypes from "prop-types";
 
 
-const Navbar = ({selectedProducts}) => {
+const Navbar = ({selectedProducts, price}) => {
     return (
-        <div className="bg-orange-100 py-10 border-b-2 mb-10">
+        <div className="bg-orange-50 py-10 mb-10">
             <div className="w-11/12 mx-auto flex justify-between">
                 <div>
-                    <h2 className="text-3xl font-bold">logo</h2>
+                    <h2 className="text-3xl font-bold">ShopSphere</h2>
                 </div>
-                <div className="text-2xl font-bold flex gap-6">
+                <div className="text-xl font-bold flex gap-6">
                     <p>Home</p>
                     <p>Product</p>
                     <p>Cart: {selectedProducts.length}</p>
-                    <p>$500</p>
+                    <p>${price}</p>
                 </div>
             </div>
         </div>
@@ -20,7 +20,8 @@ const Navbar = ({selectedProducts}) => {
 };
 
 Navbar.propTypes = {
-    selectedProducts: PropTypes.array
+    selectedProducts: PropTypes.array,
+    price: PropTypes.number
 }
 
 export default Navbar;

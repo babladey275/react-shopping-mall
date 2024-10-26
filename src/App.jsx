@@ -12,6 +12,23 @@ const [isActive, setIsActive] = useState({
 
 const [selectedProducts, setSelectedProducts] = useState([]);
 
+const [price, setPrice] =useState(500);
+
+const handleIncreasePrice = pr => {
+  setPrice(price + pr);
+}
+
+const handleDeletePrice = id => {
+  const product = selectedProducts.find(p => p.id === id);
+  setPrice(price - product.price);
+}
+
+const handleDelete = id => {
+  handleDeletePrice(id);
+  const remainingProduct = selectedProducts.filter(p => p.id != id);
+  setSelectedProducts(remainingProduct);
+}
+
 const handleSelectedProduct = (product) => {
   const isExist = selectedProducts.find((p) => p.id == product.id);
 
@@ -19,6 +36,7 @@ const handleSelectedProduct = (product) => {
     alert("Already Exist.")
   }
   else{
+    handleIncreasePrice(product.price);
     const newProducts = [...selectedProducts, product];
     setSelectedProducts(newProducts);
   }
@@ -40,10 +58,10 @@ const handleIsActiveState = (status) => {
 }
   return (
     <>
-      <Navbar selectedProducts={selectedProducts}></Navbar>
+      <Navbar price={price} selectedProducts={selectedProducts}></Navbar>
       <div className='w-11/12 mx-auto md:flex'>
         <Allproducts handleSelectedProduct={handleSelectedProduct}></Allproducts>
-        <CartContainer selectedProducts={selectedProducts} handleIsActiveState={handleIsActiveState}
+        <CartContainer handleDelete={handleDelete} selectedProducts={selectedProducts} handleIsActiveState={handleIsActiveState}
         isActive={isActive}></CartContainer>
       </div>
     </>

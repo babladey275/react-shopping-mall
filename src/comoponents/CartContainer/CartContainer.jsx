@@ -3,7 +3,7 @@ import About from "../About/About";
 import Cart from "../Cart/Cart";
 
 
-const CartContainer = ({isActive, handleIsActiveState, selectedProducts}) => {
+const CartContainer = ({isActive, handleIsActiveState, selectedProducts, handleDelete}) => {
     return (
         <div className="md:w1/3">
             <h2 className="text-3xl font-bold">Cart Container</h2>
@@ -14,7 +14,7 @@ const CartContainer = ({isActive, handleIsActiveState, selectedProducts}) => {
             </div>
 
             {
-                isActive.cart ? <Cart selectedProducts={selectedProducts}></Cart> : <About></About>
+                isActive.cart ? <Cart handleDelete={handleDelete} selectedProducts={selectedProducts}></Cart> : <About></About>
             }
         </div>
     );
@@ -23,7 +23,8 @@ const CartContainer = ({isActive, handleIsActiveState, selectedProducts}) => {
 CartContainer.propTypes = {
     selectedProducts: PropTypes.array,
     isActive: PropTypes.object,
-    handleIsActiveState: PropTypes.func
+    handleIsActiveState: PropTypes.func,
+    handleDelete: PropTypes.func
 }
 
 export default CartContainer;

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Cart = ({selectedProducts}) => {
+const Cart = ({selectedProducts, handleDelete}) => {
     // console.log(selectedProducts);
     return (
         <div>
@@ -11,7 +11,8 @@ const Cart = ({selectedProducts}) => {
                         <div className='flex justify-between gap-6'>
                         <img className='w-20 h-20' src={product.image} alt="" />
                         <p className='font-bold'>{product.name}</p>
-                        <button className='px-4 my-4 bg-red-600 rounded-xl font-bold'>Delete</button>
+                        <button className='px-4 my-4 bg-red-600 rounded-xl font-bold'
+                        onClick={() => handleDelete(product.id)}>Delete</button>
                     </div>
                     </div>
                 ))
@@ -21,7 +22,8 @@ const Cart = ({selectedProducts}) => {
 };
 
 Cart.propTypes = {
-    selectedProducts: PropTypes.array
+    selectedProducts: PropTypes.array,
+    handleDelete: PropTypes.func
 }
 
 export default Cart;

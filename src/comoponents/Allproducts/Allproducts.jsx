@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SingleProduct from "../SingleProduct/SingleProduct";
 
-const Allproducts = () => {
+const Allproducts = ({handleSelectedProduct}) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() =>{
@@ -15,7 +15,7 @@ const Allproducts = () => {
             <h1 className="text-4xl font-bold">All Products</h1>
             <div className="md:grid md:grid-cols-2">
                 {
-                    products.map((product) => <SingleProduct key={product.id} product={product}></SingleProduct>)
+                    products.map((product) => <SingleProduct handleSelectedProduct={handleSelectedProduct} key={product.id} product={product}></SingleProduct>)
                 }
             </div>
         </div>

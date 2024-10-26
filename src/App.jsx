@@ -10,6 +10,20 @@ const [isActive, setIsActive] = useState({
   status: "cart"
 });
 
+const [selectedProducts, setSelectedProducts] = useState([]);
+
+const handleSelectedProduct = (product) => {
+  const isExist = selectedProducts.find((p) => p.id == product.id);
+
+  if(isExist) {
+    alert("Already Exist.")
+  }
+  else{
+    const newProducts = [...selectedProducts, product];
+    setSelectedProducts(newProducts);
+  }
+}
+
 const handleIsActiveState = (status) => {
   if(status == "cart") {
     setIsActive({
@@ -26,10 +40,10 @@ const handleIsActiveState = (status) => {
 }
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar selectedProducts={selectedProducts}></Navbar>
       <div className='w-11/12 mx-auto md:flex'>
-        <Allproducts></Allproducts>
-        <CartContainer handleIsActiveState={handleIsActiveState}
+        <Allproducts handleSelectedProduct={handleSelectedProduct}></Allproducts>
+        <CartContainer selectedProducts={selectedProducts} handleIsActiveState={handleIsActiveState}
         isActive={isActive}></CartContainer>
       </div>
     </>

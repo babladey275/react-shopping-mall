@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import About from "../About/About";
 import Cart from "../Cart/Cart";
 
 
-const CartContainer = ({isActive, handleIsActiveState}) => {
+const CartContainer = ({isActive, handleIsActiveState, selectedProducts}) => {
     return (
         <div className="md:w1/3">
             <h2 className="text-3xl font-bold">Cart Container</h2>
@@ -13,10 +14,16 @@ const CartContainer = ({isActive, handleIsActiveState}) => {
             </div>
 
             {
-                isActive.cart ? <Cart></Cart> : <About></About>
+                isActive.cart ? <Cart selectedProducts={selectedProducts}></Cart> : <About></About>
             }
         </div>
     );
 };
+
+CartContainer.propTypes = {
+    selectedProducts: PropTypes.array,
+    isActive: PropTypes.object,
+    handleIsActiveState: PropTypes.func
+}
 
 export default CartContainer;

@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 
 
-const SingleProduct = ({product}) => {
+const SingleProduct = ({product, handleSelectedProduct}) => {
     const {name, image, description, price} = product;
     return (
         <div className="space-y-4 mr-4 mt-6 p-4 border-2 shadow-lg rounded-2xl text-center">
@@ -9,9 +10,15 @@ const SingleProduct = ({product}) => {
             <p className="text-gray-700 text-xl">{description}</p>
             <p>Price: ${price}</p>
 
-            <button className="px-6 py-4 bg-slate-200 rounded-xl font-bold">Add To Cart</button>
+            <button className="px-6 py-4 border-2 bg-stone-50 active:bg-gray-200 rounded-xl font-bold text-xl" 
+            onClick={() => handleSelectedProduct(product)}>Add To Cart</button>
         </div>
     );
 };
+
+SingleProduct.propTypes = {
+    product: PropTypes.object,
+    handleSelectedProduct: PropTypes.func
+}
 
 export default SingleProduct;

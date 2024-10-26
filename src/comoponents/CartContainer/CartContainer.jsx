@@ -4,7 +4,7 @@ import Cart from "../Cart/Cart";
 
 const CartContainer = ({isActive, handleIsActiveState}) => {
     return (
-        <div>
+        <div className="md:w1/3">
             <h2 className="text-3xl font-bold">Cart Container</h2>
 
             <div className='flex justify-between mt-8'>

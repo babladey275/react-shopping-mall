@@ -27,7 +27,7 @@ const handleIsActiveState = (status) => {
   return (
     <>
       <Navbar></Navbar>
-      <div className='w-11/12 mx-auto flex justify-between'>
+      <div className='w-11/12 mx-auto md:flex'>
         <Allproducts></Allproducts>
         <CartContainer handleIsActiveState={handleIsActiveState}
         isActive={isActive}></CartContainer>

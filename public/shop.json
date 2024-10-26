@@ -1,0 +1,83 @@
+[
+    {
+        "category": "Fashion",
+        "description": "Stylish denim jacket with a vintage finish.",
+        "id": "F001",
+        "image": "https://tieshop.com/cdn/shop/files/Retrodenimjacket_0000_1-BL25jn019010001_7.jpg?v=1705412889",
+        "isFeatured": true,
+        "name": "Retro Denim Jacket",
+        "price": 59.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Classic white sneakers with a modern twist.",
+        "id": "F002",
+        "image": "https://img.ltwebstatic.com/images3_spmp/2023/10/23/09/169805617932343bf96eb1ee657ff34ffa2ad06ed6_thumbnail_720x.webp",
+        "isFeatured": false,
+        "name": "Urban White Sneakers",
+        "price": 49.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Elegant evening gown perfect for special occasions.",
+        "id": "F003",
+        "image": "https://i5.walmartimages.com/seo/Women-Summer-Casual-Party-Dress-Lantern-Sleeve-Solid-Long-Dresses-With-Belt-Formal-Floral-Gown-Elegant-Evening-Gowns-Pockets-Ball_5373bdb7-ae0e-4ac5-ac4e-1dcc16e72d48_1.d48de572a3354f3630e15f8dda622634.jpeg",
+        "isFeatured": true,
+        "name": "Sophisticated Evening Gown",
+        "price": 199.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Trendy oversized hoodie for casual wear.",
+        "id": "F004",
+        "image": "https://mavesapparel.com/cdn/shop/articles/get-comfy-with-oversized-hoodies-in-the-usa-maves-apparel.jpg?v=1701722788",
+        "isFeatured": false,
+        "name": "Comfy Oversized Hoodie",
+        "price": 39.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Chic handbag with multiple compartments.",
+        "id": "F005",
+        "image": "https://ovrlyne.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-29-at-12.58.49-AM-Copy-600x600.jpeg",
+        "isFeatured": true,
+        "name": "Fashionista Handbag",
+        "price": 89.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Classic aviator sunglasses for a timeless look.",
+        "id": "F006",
+        "image": "https://www.fastfashionbd.com/cdn/shop/files/1.2_055ce25a-86a0-4ae5-a33f-6cd3b8860292.jpg?v=1725184287",
+        "isFeatured": false,
+        "name": "Aviator Sunglasses",
+        "price": 29.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Stylish belt with a unique buckle design.",
+        "id": "F008",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkEWoGsHvUe8oSutKHJdFSrDKNtlTtvnCRFA&s",
+        "isFeatured": false,
+        "name": "Designer Belt",
+        "price": 24.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Warm winter coat for cold weather.",
+        "id": "F009",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-tLRDhkmxHY1bLKaazDYHRnPaj0MFY0QapA&s",
+        "isFeatured": true,
+        "name": "Cozy Winter Coat",
+        "price": 139.99
+    },
+    {
+        "category": "Fashion",
+        "description": "Floral summer dress ideal for warm days.",
+        "id": "F010",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr_85UVPUPiK6zNJm6eRnMXZRyW6WlgykUfw&s",
+        "isFeatured": false,
+        "name": "Summer Floral Dress",
+        "price": 49.99
+    }
+]
